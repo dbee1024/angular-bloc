@@ -1,8 +1,9 @@
 (function() {
-     function CollectionCtrl() {
+    function CollectionCtrl(Fixtures) {
         this.albums = Fixtures.getCollection(12);
-     }
- //enisp
-     angular.module('blocJams')
-         .controller('CollectionCtrl', CollectionCtrl);
- })();
+    };
+
+    angular
+        .module('blocJams')
+        .controller('CollectionCtrl', ['Fixtures', CollectionCtrl]);
+})();
